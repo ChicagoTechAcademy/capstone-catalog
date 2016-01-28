@@ -17,7 +17,11 @@
 
 <p>
   <strong>Members</strong>
-  <%= @member %>
+  <ul>
+    <% @team.members do |m| %>
+      <li><%= m.name %></li>
+    <% end %>
+  </ul>
 </p>
 
 <%= link_to 'Edit', edit_team_path(@team) %> |
